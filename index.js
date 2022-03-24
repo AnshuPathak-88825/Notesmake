@@ -8,6 +8,8 @@ app.use('/',require('./routes/index'));//mode to get request from index.js
 
 
 
+
+
 app.listen(port,function(error){
     if(error)
     {
