@@ -1,15 +1,22 @@
 {
-  "name": "project",
+  "name": "notesmake",
   "version": "1.0.0",
-  "description": "",
+  "description": "This Website is for creating notes",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Anshu Pathak and Nishant",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnshuPathak-88825/Notesmake.git"
+  },
+  "author": "Anshu and Nishant",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnshuPathak-88825/Notesmake/issues"
+  },
+  "homepage": "https://github.com/AnshuPathak-88825/Notesmake#readme",
   "dependencies": {
-    "express": "^4.17.3",
-    "mongoose": "^6.2.7"
+    "express": "^4.17.3"
   }
 }
