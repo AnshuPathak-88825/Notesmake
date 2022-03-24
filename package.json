@@ -18,6 +18,7 @@
   "homepage": "https://github.com/AnshuPathak-88825/Notesmake#readme",
   "dependencies": {
     "ejs": "^3.1.6",
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "mongoose": "^6.2.8"
   }
 }
