@@ -5,8 +5,8 @@ const app=express();
 const port=8000;
 
 app.use('/',require('./routes/index'));//mode to get request from index.js
-
-
+app.set('view engine','ejs');
+app.set('views','./views');
 
 
 
