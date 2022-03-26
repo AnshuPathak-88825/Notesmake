@@ -1,12 +1,52 @@
-module.exports.profile=function(req,res)
-{
+const User = require('../model/user');
+
+
+module.exports.profile = function (req, res) {
     return res.render('profile');
 }
-module.exports.signup=function(req,res)
-{
-    return res.render('user_sign_up',{title:'signup'});
+module.exports.signup = function (req, res) {
+    return res.render('user_sign_up', { title: 'signup' });
 }
-module.exports.signin=function(req,res)
-{
-    return res.render('user_sign_in',{title:'signin'});
+module.exports.signin = function (req, res) {
+    return res.render('user_sign_in', { title: 'signin' });
+}
+
+module.exports.create = function (req, res) {
+    
+    console.log(req.body);
+    if (req.body.password != req.body.confirm_password) {
+        return res.redirect('back');
+    }
+    User.findOne({ email: req.body.email }, function (error, user) {
+
+        if (error) {
+            console.log("Hey Anshu procoder you're getting error during your find one condition in create controller");
+            retrun;
+        }
+        if (!user) {
+
+            
+            User.create({
+                email:req.body.email,
+                passward:req.body.password,
+                name:req.body.name
+            }, function (error, user) {
+
+                if (error) {
+                    console.log("Hey Anshu procoder you're getting error during your find one condition in create ");
+                    retrun ;
+
+                }
+               
+                return res.redirect('/user/signin');
+
+            });
+        }
+        else{
+            return res.redirect('back');
+        }
+
+
+
+    });
 }

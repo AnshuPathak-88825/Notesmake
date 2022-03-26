@@ -1,4 +1,3 @@
-const { timeStamp } = require('console');
 const mongoose=require('mongoose');
 const userschema=new mongoose.Schema(
     {
@@ -9,16 +8,14 @@ const userschema=new mongoose.Schema(
         },
         passward:{
             type:String,
-            required:true,
-            unique:true
+            required:true
         },name:{
             type:String,
-            required:true,
-            unique:true
+            required:true
         }
     },{
         timestamps:true
     }
-)
+);
 const User=mongoose.model('User',userschema);
 module.exports=User;
