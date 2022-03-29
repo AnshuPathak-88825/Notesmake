@@ -1,6 +1,6 @@
 //getting express package
 const express=require('express');
-// express is function 
+// express is functio
 const cookieParser=require('cookie-parser');
 const app=express();
 const port=9000;
