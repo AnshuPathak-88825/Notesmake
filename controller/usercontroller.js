@@ -11,6 +11,7 @@ module.exports.signin = function (req, res) {
     return res.render('user_sign_in', { title: 'signin' });
 }
 
+// signup controller
 module.exports.create = function (req, res) {
     
     console.log(req.body);
