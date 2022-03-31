@@ -1,10 +1,16 @@
-const { authenticate } = require('passport');
+// const { authenticate } = require('passport'); 
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
+
 const User = require('../model/user');
 
 
-//authentication using passport
+// authentication using passport
+// The LocalStrategy constructor takes a verify function as an argument, which accepts username and password as arguments.
+// When authenticating a request, the strategy parses a username and password, which are submitted via an HTML form to 
+// the web application. The strategy then calls the verify function with those credentials. 
+
+
 passport.use(new LocalStrategy({
     usernameField: 'email'
 }, function (email, password, done) {
@@ -26,8 +32,10 @@ passport.use(new LocalStrategy({
 
 }));
 
-// serializing the user to decide which key is used to kept in cookies
+
+// serializing decide which key we are gonna put in cookies
 passport.serializeUser(function (user, done) {
+    console.log(user.id);
     done(null, user.id);
 });
 
@@ -45,7 +53,27 @@ passport.deserializeUser(function (id, done) {
 
 });
 
+
 // check if user is authenticated
 
+passport.checkAuthentication = function (req, res, next) {
+    // if user is signed in , then pass on request to the next function (controller's action)
+    if (req.isAuthenticated()) {
+        return next();
 
-module.exports=passport;
+
+    }
+    // if user is not signed in 
+
+    return res.redirect('/user/signin');
+
+}
+
+
+passport.setAuthenticatedUser = function (req, res, next) {
+    if (req.isAuthenticated()) {
+        res.locals.user = req.user;
+    }
+    next();
+}
+module.exports = passport;
