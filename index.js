@@ -4,15 +4,15 @@ const cookieParser = require('cookie-parser');
 const app = express();
 const port = 9000;
 const db = require('./config/mogooose');
-const expressLayouts=require('express-ejs-layouts');
 
 //used for session cookie
 const session = require('express-session');
 const passport = require('passport');
 const passportLocal = require('./config/passport_local_strategy');
+
+
 app.use(express.urlencoded());
-app.use(express.static('./assets'));
-app.use(expressLayouts);
+app.use(express.static('assets'));
 
 app.use(cookieParser());
 
@@ -26,7 +26,7 @@ app.use(session({
     saveUninitialized: false,
     resave: false,
     cookie: {
-        maxAge: (1000* 60 * 100)
+        maxAge: (10000000)
     }
 }));
 app.use(passport.initialize());
