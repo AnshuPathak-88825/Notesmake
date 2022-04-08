@@ -4,12 +4,15 @@ const cookieParser = require('cookie-parser');
 const app = express();
 const port = 9000;
 const db = require('./config/mogooose');
+const expressLayouts=require('express-ejs-layouts');
 
 //used for session cookie
 const session = require('express-session');
 const passport = require('passport');
 const passportLocal = require('./config/passport_local_strategy');
 app.use(express.urlencoded());
+app.use(express.static('./assets'));
+app.use(expressLayouts);
 
 app.use(cookieParser());
 

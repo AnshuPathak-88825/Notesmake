@@ -5,16 +5,25 @@ module.exports.profile = function (req, res) {
     return res.render('profile');
 }
 module.exports.signup = function (req, res) {
+    if (req.isAuthenticated()) {
+        return res.redirect('/user/profile');
+
+
+    }
     return res.render('user_sign_up', { title: 'signup' });
 }
 module.exports.signin = function (req, res) {
+    if (req.isAuthenticated()) {
+        return res.redirect('/user/profile');
+
+
+    }
     return res.render('user_sign_in', { title: 'signin' });
 }
 
 // signup controller
 module.exports.create = function (req, res) {
     
-    console.log(req.body);
     if (req.body.password != req.body.confirm_password) {
         return res.redirect('back');
     }
@@ -57,4 +66,11 @@ module.exports.createSession=function(req,res)
 {
     return res.redirect('/user/profile');
 
+}
+
+//signout controller
+module.exports.destroysession=function(req,res)
+{
+    req.logout();
+    return res.redirect('/');
 }
