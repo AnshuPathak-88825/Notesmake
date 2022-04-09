@@ -1,8 +1,17 @@
 const User = require('../model/user');
-
+const Post=require('../model/post');
 
 module.exports.profile = function (req, res) {
-    return res.render('profile');
+    Post.find({user:req.user._id},function(error,posts){
+
+        if(error)
+        {
+            console.log("error during fectching data from database");
+        }
+    return res.render('profile',{title:"Profile",post_list:posts});
+
+
+    });
 }
 module.exports.signup = function (req, res) {
     if (req.isAuthenticated()) {
