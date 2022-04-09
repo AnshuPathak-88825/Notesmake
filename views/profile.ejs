@@ -6,8 +6,18 @@
     </head>
    
     <a href="/user/profile"> <%= user.name %></a>
+    <a href="/user/signout">Sign Out</a>
     <h1>Profile</h1>
     <p><%=user.name%></p>
     <p><%=user.email%></p>
+    <section id="feed-notes">
+        <h4>Notes</h4>
+        <form action="/posts/create" id="new-notes-form" method="POST">
+            <input type="text" name="title">
+            <textarea name="content" id="" cols="30" rows="10"></textarea>
+            <input type="submit" value="post" placeholder="Type here">
+    
+        </form>
+    </section>
 
 </html>
