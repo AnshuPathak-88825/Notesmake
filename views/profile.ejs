@@ -1,6 +1,7 @@
 <html>
   <head>
     <title><%=title%></title>
+    
   </head>
 
   <a href="/user/profile"> <%= user.name %></a>
@@ -8,6 +9,7 @@
   <h1>Profile</h1>
   <p><%=user.name%></p>
   <p><%=user.email%></p>
+  <button type="submit"><a href="/posts/addnote">add</a></button>
   <ul>
       <% for(let i of post_list){%>
         <li><%=i.content%></li>
@@ -15,12 +17,5 @@
 
         <% } %>
   </ul>
-  <section id="feed-notes">
-    <h4>Notes</h4>
-    <form action="/posts/create" id="new-notes-form" method="POST">
-      <input type="text" name="title" />
-      <textarea name="content" id="" cols="30" rows="10"></textarea>
-      <input type="submit" value="post" placeholder="Type here" />
-    </form>
-  </section>
+ 
 </html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/addnotes.css" />
+
+    <title>Add note</title>
+
+  </head>
+  <body>
+    <div class="header">
+      <h1>Notes</h1>
+    </div>
+     
+      <div id="wrapper">
+
+       
+        <form action="/posts/create" id="new-notes-form" method="POST">
+
+          <div id="margin" style="color: white;font-weight: bold; font-size: 25px;" >Title: <input id="title" type="text" name="title"></div>
+          <textarea placeholder="Enter something funny." id="text" name="content" rows="6" style="overflow: hidden; word-wrap: break-word; resize: none; height: 320px; "></textarea>  
+          <input id="button" type="submit" value="Create">
+        
+        </form>
+      
+      </div>
+      
+  <script type="text/javascript" src="/script/addnotes.js" ></script>
+
+  </body>
+
+</html>

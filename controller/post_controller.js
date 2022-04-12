@@ -1,6 +1,14 @@
 const Post=require('../model/post');
 module.exports.create=function(req,res)
 {
+    if(!req.body.content)
+    {
+        return res.redirect('back');
+    }
+    if(!req.body.title)
+    {
+        return res.redirect('back');
+    }
     Post.create({
         content:req.body.content,
         Title:req.body.title,
@@ -15,4 +23,9 @@ module.exports.create=function(req,res)
         }
         return res.redirect('back');
     });
+}
+module.exports.addnote=function(req,res)
+{
+    return res.render('addnotes');
+    
 }
