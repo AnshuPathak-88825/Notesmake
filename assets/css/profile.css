@@ -1,0 +1,64 @@
+*
+{
+padding: 0px;
+margin: 0px;
+}
+.box-container{
+    display: flex;
+  /* justify-content: space-around;
+  justify-content: space-between; */
+
+  flex-wrap: wrap;
+  height: auto;
+  padding: 0px;
+  margin-top:35px ;
+
+}
+.notes-cont{
+    min-width: 200;
+    height: 290px;
+    width: 291px;
+    display: flex;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 13px;
+    margin: 7px;
+   
+
+
+}
+.title{
+    height: 60px;
+    /* border: 1px solid red; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.date{
+    width: 180px;
+    /* border: 1px solid red; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+.content{
+    width: 180px;
+    height: 130px;
+    /* border: 1px solid red; */
+    text-align: center;
+    display: flex;
+    overflow: hidden;
+    padding: 10px;
+}
+.buttons{
+    margin-top: 3px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}

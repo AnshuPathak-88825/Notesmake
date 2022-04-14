@@ -1,8 +1,13 @@
 const express=require('express');
 const router=express.Router();
+const passport = require('passport');
 
 const postcontroller=require('../controller/post_controller');
 router.post('/create',postcontroller.create);
-router.get('/addnote',postcontroller.addnote);
+
+// use passport here of to checkAuthentication of user is present or not 
+router.get('/addnote',passport.checkAuthentication,postcontroller.addnote);
+router.get('/delete',postcontroller.deletenote);
+
 
 module.exports=router;
