@@ -8,6 +8,8 @@ router.post('/create',postcontroller.create);
 // use passport here of to checkAuthentication of user is present or not 
 router.get('/addnote',passport.checkAuthentication,postcontroller.addnote);
 router.get('/delete',postcontroller.deletenote);
+router.get('/read',postcontroller.readnotes);
+
 
 
 module.exports=router;

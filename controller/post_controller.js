@@ -28,6 +28,7 @@ module.exports.create=function(req,res)
 module.exports.addnote=function(req,res)
 {
 
+
     return res.render('addnotes');
     
 }
@@ -59,18 +60,21 @@ module.exports.readnotes=function(req,res)
 
     // get id from query of url 
     const id =req.query.id;
-
-    // this is function will find out and delete our contact 
-
-    Post.findByIdAndDelete(id,function(error){
-
+    Post.findById({_id:id},function(error,user){
         if(error)
         {
-            console.log("error during deleting notes");
+            console.log("error is their");
             return ;
+
         }
-        return res.redirect('back');
+        console.log(user._id);
+        return res.render('_readview',{notes:user});
+        return ;
+        
+
+    })
+    // return res.render('home');
 
 
-    });
+    
 }

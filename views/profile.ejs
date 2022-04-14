@@ -25,7 +25,8 @@
       <div class="date"><%=i.df%>sdf</div>
       <div class="content"><%=i.content%></div>
       <div class="buttons">
-        <button type="button" class="btn btn-outline-secondary">Read</button>
+        
+        <a href="/posts/read/?id=<%=i._id%>"><button type="button" class="btn btn-outline-secondary">Read</button></a>
        <a href="/posts/delete/?id=<%=i._id%>"><button type="button" class="btn btn-outline-danger">Delete</button></a> 
       </div>
     </div>
