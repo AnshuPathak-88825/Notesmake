@@ -9,29 +9,39 @@
       crossorigin="anonymous"
     />
   </head>
-  
+
   <a href="/user/profile"> <%= user.name %></a>
   <a href="/user/signout">Sign Out</a>
   <h1>Profile</h1>
-  <p><%=user.name%></p>
+  <p><%=user.name[1]%></p>
   <p><%=user.email%></p>
-  <a href="/posts/addnote"><button type="button" class="btn btn-secondary">Secondary</button></a>
- 
+  <a href="/posts/addnote"
+    ><button type="button" class="btn btn-secondary">Add note</button></a
+  >
+
   <div class="box-container">
     <% for(let i of post_list){%>
 
     <div class="notes-cont">
       <div class="title"><%=i.Title%></div>
-      <div class="date"><%=i.df%>sdf</div>
+      <div class="date">
+        <% var date =i.createdAt.toDateString(); %> <%=date%>
+      </div>
       <div class="content"><%=i.content%></div>
+
       <div class="buttons">
-        
-        <a href="/posts/read/?id=<%=i._id%>"><button type="button" class="btn btn-outline-secondary">Read</button></a>
-       <a href="/posts/delete/?id=<%=i._id%>"><button type="button" class="btn btn-outline-danger">Delete</button></a> 
+        <a href="/posts/read/?id=<%=i._id%>"
+          ><button type="button" class="btn btn-outline-secondary">
+            Read
+          </button></a
+        >
+        <a href="/posts/delete/?id=<%=i._id%>"
+          ><button type="button" class="btn btn-outline-danger">
+            Delete
+          </button></a
+        >
       </div>
     </div>
     <% } %>
-
-   
   </div>
 </html>

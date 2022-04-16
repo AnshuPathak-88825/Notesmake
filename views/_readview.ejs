@@ -7,6 +7,11 @@
 <body>
     <%=notes.Title%>
     <%=notes.content%>
+    <form action="/posts/edit/?id=<%=notes._id%>" method="post">
+        <input type="text" name="Title" value="<%=notes.Title%>">
+        <input type="text" name="content" value="<%=notes.content%>">
+        <input type="submit">
 
+    </form>
 </body>
 </html>

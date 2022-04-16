@@ -33,6 +33,7 @@ module.exports.signin = function (req, res) {
 // signup controller
 module.exports.create = function (req, res) {
     
+    console.log(req.body.name);
     if (req.body.password != req.body.confirm_password) {
         return res.redirect('back');
     }
