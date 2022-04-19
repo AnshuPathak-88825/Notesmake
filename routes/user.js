@@ -11,7 +11,13 @@ router.get('/signout', usercontroller.destroysession);
 
 router.post('/create', usercontroller.create);
 const todocontroller=require('../controller/to_docontroller');
-router.use('/profile',require('../routes/todor'))
+
+// this middleware using for todo
+router.use('/profile',require('../routes/todor'));
+
+// this middleware using for links
+
+router.use('/profile',require('../routes/links'));
 router.post('/create-session', passport.authenticate(
     'local',
     {

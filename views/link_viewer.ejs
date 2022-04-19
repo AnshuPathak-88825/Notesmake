@@ -1,0 +1,12 @@
+<p><%=username%></p>
+<form action="/user/profile/create" method="post">
+  <input type="text" name="title" placeholder="title" />
+  <input type="text" name="link" placeholder="link" />
+  <input type="submit" >
+</form>
+<p> <%for(let i of link_list) {%> </p>
+  <a href="<%=i.Link%>"><%=i.Title%></a>
+  <a href="/user/profile/deletelink/?id=<%=i._id%>">delete</a>
+  <%}%>
+
+

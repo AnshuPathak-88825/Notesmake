@@ -15,6 +15,7 @@
     <!-- <% for(let i of todo_list){ %>
     <p><%=i.Conten%></p>
     <%}%> -->
+    <%todo_list.reverse()%>
     <% for(let i of todo_list){%>
     <div><%=i.Content%> <a href="/user/profile/delete?id=<%=i._id%>">Delete notes</a></div>
     <!-- <a href="/user/profile/edit?id=<%=i._id%>">Edit</a> -->
