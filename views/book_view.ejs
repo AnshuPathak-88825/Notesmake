@@ -1,0 +1,9 @@
+<h1>Book view</h1>
+<form action="/user/profile/Bookcreate" method="post">
+  <input type="text" placeholder="Bookname" name="Bookname" />
+  <input type="submit" />
+</form>
+<%book_list.reverse()%>
+ <%for(let i of book_list){%>
+<p><%=i.Book%><a href="/user/profile/Bookdelete/?id=<%=i._id%>">delete</a></p>
+<%}%>

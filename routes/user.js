@@ -11,6 +11,7 @@ router.get('/signout', usercontroller.destroysession);
 
 router.post('/create', usercontroller.create);
 const todocontroller=require('../controller/to_docontroller');
+const middleware = require('node-sass-middleware');
 
 // this middleware using for todo
 router.use('/profile',require('../routes/todor'));
@@ -18,6 +19,11 @@ router.use('/profile',require('../routes/todor'));
 // this middleware using for links
 
 router.use('/profile',require('../routes/links'));
+
+
+// this middleware is for books 
+router.use('/profile',require('../routes/book'));
+
 router.post('/create-session', passport.authenticate(
     'local',
     {
