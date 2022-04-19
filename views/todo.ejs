@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>To do</h1>
+    <form action="/user/profile/todo/create/" method="post">
+      <input type="text" name="routine" placeholder="addwork" />
+      <input type="submit" />
+    </form>
+    <!-- <% for(let i of todo_list){ %>
+    <p><%=i.Conten%></p>
+    <%}%> -->
+    <% for(let i of todo_list){%>
+    <div><%=i.Content%> <a href="/user/profile/delete?id=<%=i._id%>">Delete notes</a></div>
+    <!-- <a href="/user/profile/edit?id=<%=i._id%>">Edit</a> -->
+
+    <% } %>
+  </body>
+</html>

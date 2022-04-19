@@ -10,7 +10,8 @@ router.get('/signout', usercontroller.destroysession);
 
 
 router.post('/create', usercontroller.create);
-//use passport as middleware to authenticate
+const todocontroller=require('../controller/to_docontroller');
+router.use('/profile',require('../routes/todor'))
 router.post('/create-session', passport.authenticate(
     'local',
     {

@@ -80,7 +80,6 @@ module.exports.edit = function (req, res) {
         }
         console.log("updatation done");
         return res.redirect('/user/profile');
-    return res.render('_readview', { notes: user });
 
     });
 
