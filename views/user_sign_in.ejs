@@ -1,13 +1,26 @@
 <html>
-    <head>
-        <title><%=title%></title>
-    </head>
-</html>
-<h1>Sign In</h1>
+  <head>
+    <title>Signin</title>
+    <link rel="stylesheet" href="/css/signin.css" />
+  </head>
+  <!-- <h1>Sign In</h1>
 
 <form action="/user/create-session" method="POST">
     <input type="email" name="email" placeholder="Email"  required>
     <input type="password" name="password" placeholder="Password"  required>
     <input type="submit" value="Sign In">
 
-</form>
+</form> -->
+  <body>
+      <div class="container">
+        <form class="form"  action="/user/create-session" method="POST" >
+          <h1>LOGIN</h1>
+
+          <input type="text" name="email" placeholder="Email" />
+          <input type="password" name="password" placeholder="Password" />
+          <a href="/user/signup">Signup?</a>
+          <button type="submit" id="login-button" >Login</button>
+        </form>
+      </div>
+  </body>
+</html>

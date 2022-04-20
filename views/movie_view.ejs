@@ -1,0 +1,12 @@
+<h1>Movie view<h1>
+    <form action="/user/profile/moviecreate/" method="post">
+        <input type="text" name="moviename" placeholder="addwork" />
+        <input type="submit" />
+      </form>
+
+       <%for(let i of Movie_info) {%>
+       <%=i.Moviename%>
+  <a href="/user/profile/deletemovie/?id=<%=i._id%>">delete</a>
+    
+        <%}%>
+      

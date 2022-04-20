@@ -24,6 +24,10 @@ router.use('/profile',require('../routes/links'));
 // this middleware is for books 
 router.use('/profile',require('../routes/book'));
 
+
+// this middleware is for movies 
+router.use('/profile',require('../routes/movie'));
+
 router.post('/create-session', passport.authenticate(
     'local',
     {

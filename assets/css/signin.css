@@ -1,0 +1,96 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(255, 255, 255);
+  outline: none;
+}
+.container {
+  min-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 100%;
+}
+.container form {
+  width: 390px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+.container form input {
+  height: 66px;
+  background-color: #e6e6e6;
+  border: 0px;
+  font-weight: bold;
+  color: #403866;
+  margin: 7px;
+  border-radius: 6px;
+  font-size: 18px;
+  padding-left: 10px;
+  box-sizing: content-box;
+}
+.container form button,
+h1 {
+  margin: 2px;
+  margin-top: 23px;
+  height: 56px;
+  border: 0px solid transparent;
+}
+.container form button {
+  background-color: #827ffe;;
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 6px;
+  display: block;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: bold;
+}
+.container form h1 {
+  text-align: center;
+  color: #403866;
+  height: 66px;
+}
+.container form a {
+  color: #5a14e6;
+  font-weight: bold;
+  position: relative;
+  left: 310px;
+  text-decoration: none;
+}
+@media screen and (max-width: 357px) {
+  .container form a {
+    color: #5a14e6;
+    font-weight: bold;
+    position: relative;
+    left: 210px;
+    text-decoration: none;
+  }
+  .container form input {
+    font-size: 16px;
+  }
+}
+#login-button:hover
+{
+    background-color: #5a14e6;
+    transition: all 1s ease-in-out;
+}
+.container form a:hover {
+    color: #3c138d;
+    transition: all 1s ease-in-out;
+    
+  }
+  .container form input:hover {
+   border: 1px solid #5a14e6;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+    
+  }
