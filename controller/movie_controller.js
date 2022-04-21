@@ -13,7 +13,7 @@ module.exports.movie_view=function(req,res)
 }
 module.exports.moviecreate=function(req,res)
 {
-    
+    console.log(req.body);
     Moviedb.create({Moviename:req.body.moviename,Done:0,user:req.user._id},function(error){
         if(error)
         {

@@ -1,4 +1,4 @@
-<h1>Movie view<h1>
+<!-- <h1>Movie view<h1>
     <form action="/user/profile/moviecreate/" method="post">
         <input type="text" name="moviename" placeholder="addwork" />
         <input type="submit" />
@@ -9,4 +9,60 @@
   <a href="/user/profile/deletemovie/?id=<%=i._id%>">delete</a>
     
         <%}%>
-      
+       -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/links.css" />
+
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="Main-container">
+    <div class="name-head">Movie List</div>
+
+    <div class="container">
+      <form class="form" action="/user/profile/moviecreate" method="POST">
+        <!-- <h1></h1> -->
+
+        <input type="text" name="moviename" placeholder="Movie-name" />
+        <button type="submit" id="login-button">Add Book in List</button>
+      </form>
+    </div>
+    <div class="main-last-container">
+
+      <%Movie_info.reverse()%>
+
+        <%for(let i of Movie_info) {%>
+          <div class="links-contrainer">
+            <div class="image">
+
+              <a href="<%=i.Link%>">
+                <%=i.Moviename%>
+              </a>
+              <a href="/user/profile/deletemovie/?id=<%=i._id%>">delete</a>
+            </div>
+          </div>
+
+          <%}%>
+    </div>
+  </div>
+  <div class="other-field">
+    <a href="/user/profile/">All-Notes</a>
+
+    <a href="/user/profile/todo">To-do</a>
+    <a href="/user/profile/link/?name=<%=user.name%>">Linktree</a>
+    <a href="/user/profile/Book">Books</a>
+    <a href="/user/profile/movie">Movie</a>
+    <a href="/user/signout">Sign Out</a>
+  </div>
+
+</body>
+
+</html>

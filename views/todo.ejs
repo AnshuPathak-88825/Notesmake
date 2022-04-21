@@ -4,22 +4,57 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/links.css" />
+
     <title>Document</title>
   </head>
-  <body>
-    <h1>To do</h1>
-    <form action="/user/profile/todo/create/" method="post">
-      <input type="text" name="routine" placeholder="addwork" />
-      <input type="submit" />
-    </form>
-    <!-- <% for(let i of todo_list){ %>
-    <p><%=i.Conten%></p>
-    <%}%> -->
-    <%todo_list.reverse()%>
-    <% for(let i of todo_list){%>
-    <div><%=i.Content%> <a href="/user/profile/delete?id=<%=i._id%>">Delete notes</a></div>
-    <!-- <a href="/user/profile/edit?id=<%=i._id%>">Edit</a> -->
+  <body><div class="Main-container">
+    <div class="name-head">ToDoList</div>
 
-    <% } %>
+    <div class="container">
+      <form class="form" action="/user/profile/todo/create/" method="POST">
+        <!-- <h1></h1> -->
+
+        <input type="text" name="routine" placeholder="Enter your work" />
+        <button type="submit" id="login-button">Create</button>
+      </form>
+    </div>
+    <div class="main-last-container">
+      <%for(let i of todo_list) {%>
+      <div class="links-contrainer">
+        <div class="image">
+     
+          <a href="<%=i.Link%>"><%=i.Content%></a>
+          <a href="/user/profile/delete?id=<%=i._id%>">delete</a>
+        </div>
+      </div>
+
+      <%}%>
+    </div>
+  </div>
+  <div class="other-field">
+    <a href="/user/profile/">All-Notes</a>
+
+    <a href="/user/profile/todo">To-do</a>
+    <a href="/user/profile/link/?name=<%=user.name%>">Linktree</a>
+    <a href="/user/profile/Book">Books</a>
+    <a href="/user/profile/movie">Movie</a>
+    <a href="/user/signout">Sign Out</a>
+  </div>
+   
   </body>
 </html>
+<!-- <h1>To do</h1>
+<form action="/user/profile/todo/create/" method="post">
+  <input type="text" name="routine" placeholder="addwork" />
+  <input type="submit" />
+</form> -->
+<!-- <% for(let i of todo_list){ %>
+<p><%=i.Conten%></p>
+<%}%> -->
+<!-- <%todo_list.reverse()%>
+<% for(let i of todo_list){%>
+<div><%=i.Content%> <a href="/user/profile/delete?id=<%=i._id%>">Delete notes</a></div>
+<!-- <a href="/user/profile/edit?id=<%=i._id%>">Edit</a> -->
+
+<!-- <% } %> --> -->

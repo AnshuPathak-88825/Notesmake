@@ -20,7 +20,7 @@ module.exports.create = function (req, res) {
         if (error) {
             console.log("there is and during Entering value in link schema ");
         }
-        return res.redirect('/user/profile/link');
+        return res.redirect('back');
 
 
     });

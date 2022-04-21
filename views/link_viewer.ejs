@@ -1,13 +1,4 @@
-<!-- <p><%=username%></p>
-<form action="/user/profile/create" method="post">
-  <input type="text" name="title" placeholder="title" />
-  <input type="text" name="link" placeholder="link" />
-  <input type="submit" >
-</form>
-<p> <%for(let i of link_list) {%> </p>
-  <a href="<%=i.Link%>"><%=i.Title%></a>
-  <a href="/user/profile/deletelink/?id=<%=i._id%>">delete</a>
-  <%}%> -->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,8 +25,7 @@
 
           <input type="text" name="title" placeholder="title" />
           <input type="text" name="link" placeholder="link" />
-          <a href="/user/signup">Signup?</a>
-          <button type="submit" id="login-button">Login</button>
+          <button type="submit" id="login-button">Create Link</button>
         </form>
       </div>
       <div class="main-last-container">
@@ -90,15 +80,3 @@
     </div>
   </body>
 </html>
-<!-- <li>
-  <a href="#"><i class="fab fa-facebook-f"></i></a>
-</li>
-<li>
-  <a href="#"><i class="fab fa-instagram"></i></a>
-</li>
-<li>
-  <a href="#"><i class="fab fa-github"></i></a>
-</li>
-<i class="fa-brands fa-twitter-square"></i>
-<i class="fab fa-linkedin"></i>
-<a href="#"><i class="fab fa-discord"></i></a> -->
