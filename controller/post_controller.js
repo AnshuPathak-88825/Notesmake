@@ -24,7 +24,7 @@ module.exports.create = function (req, res) {
 module.exports.addnote = function (req, res) {
 
 
-    return res.render('addnotes');
+    return res.render('addnotes',);
 
 }
 
@@ -72,16 +72,18 @@ module.exports.readnotes = function (req, res) {
 module.exports.edit = function (req, res) {
 
     const id =req.query.id;
-    let value;
-    Post.findByIdAndUpdate(id,{content:req.body.content,Title:req.body.Title},function(error,user){
-        if(error)
-        {
-            console.log("error during updates");
-        }
-        console.log("updatation done");
-        return res.redirect('/user/profile');
+    console.log(req.query.id);
+    // return res.render('');
+    // let value;
+    // Post.findByIdAndUpdate(id,{content:req.body.content,Title:req.body.Title},function(error,user){
+    //     if(error)
+    //     {
+    //         console.log("error during updates");
+    //     }
+    //     console.log("updatation done");
+    //     return res.redirect('/user/profile');
 
-    });
+    // });
 
     // console.log(req.body);
     // console.log(req.query);

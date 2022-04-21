@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+    <link rel="stylesheet" href="/css/readview.css">
     <title>Document</title>
 </head>
 <body>
-    <%=notes.Title%>
-    <%=notes.content%>
+    <!-- <%=notes.Title%>
+    <%=notes.content%> -->
     <form action="/posts/edit/?id=<%=notes._id%>" method="post">
-        <input type="text" name="Title" value="<%=notes.Title%>">
-        <input type="text" name="content" value="<%=notes.content%>">
-        <input type="submit">
+        <div class="header">
+            <div class="name-date-cont">
+                <div class="note-date">
+                    <% var date =notes.createdAt.toDateString(); %> <%=date%>
+                </div>
+                <!-- <input type="text" name="Title" value="<%=notes.Title%>"> -->
+                <div class="title">
+                    <%=notes.Title%>
+                </div>
+
+            </div>
+
+            <div class="other-field">
+                <a href="/user/profile/">All-Notes</a>
+
+                <a href="/user/profile/todo">To-do</a>
+                <a href="/user/profile/link/?name=<%=user.name%>">Linktree</a>
+                <a href="/user/profile/Book">Books</a>
+                <a href="/user/profile/movie">Movie</a>
+                <a href="/user/signout">Sign Out</a>
+              </div>
+        </div>
+        <div class="content">
+            <%=notes.content%>
+        </div>
+       <div class="update-button">
+           <a href="/posts/update?id=<%=notes._id%>">Update</a>
+       </div>
+        <!-- <input type="text" name="content" value="<%=notes.content%>"> -->
+        <!-- <textarea name="content" id="" cols="30" rows="10"></textarea>
+        <input type="submit"> -->
 
     </form>
 </body>
