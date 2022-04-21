@@ -10,7 +10,8 @@ router.get('/addnote',passport.checkAuthentication,postcontroller.addnote);
 router.get('/delete',postcontroller.deletenote);
 router.get('/read',postcontroller.readnotes);
 
-router.get('/update',postcontroller.edit);
+router.get('/edit',postcontroller.edit);
+router.post('/update',postcontroller.update);
 
 
 

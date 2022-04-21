@@ -17,11 +17,11 @@
       <div id="wrapper">
 
        
-        <form action="/posts/create" id="new-notes-form" method="POST">
+        <form action=<%=Action%> id="new-notes-form" method="POST">
 
-          <div id="margin" style="color: white;font-weight: bold; font-size: 25px;" >Title: <input id="title" type="text" name="title"></div>
-          <textarea placeholder="Enter something funny" id="text" name="content" rows="6" style="overflow: hidden; word-wrap: break-word; resize: none; height: 320px; ">sdf</textarea>  
-          <input id="button" type="submit" value="Create">
+          <div id="margin" style="color: white;font-weight: bold; font-size: 25px;" >Title: <input id="title" type="text" name="title" value=<%=Title%>></div>
+          <textarea placeholder="Enter something funny" id="text" name="content" rows="6" style="overflow: hidden; word-wrap: break-word; resize: none; height: 320px; "><%=Content%></textarea>  
+          <input id="button" type="submit" value=<%=Button%>>
         
         </form>
       

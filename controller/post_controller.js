@@ -1,3 +1,4 @@
+const { redirect } = require('express/lib/response');
 const Post = require('../model/post');
 module.exports.create = function (req, res) {
 
@@ -23,8 +24,11 @@ module.exports.create = function (req, res) {
 }
 module.exports.addnote = function (req, res) {
 
-
-    return res.render('addnotes',);
+    title = "";
+    content = ""
+    button = "Create"
+    action="/posts/create";
+    return res.render('addnotes', { Title: title, Content: content, Button: button,Action:action });
 
 }
 
@@ -52,6 +56,7 @@ module.exports.readnotes = function (req, res) {
 
     // get id from query of url 
     const id = req.query.id;
+
     Post.findById({ _id: id }, function (error, user) {
         if (error) {
             console.log("error is their");
@@ -71,22 +76,39 @@ module.exports.readnotes = function (req, res) {
 }
 module.exports.edit = function (req, res) {
 
-    const id =req.query.id;
+    const id = req.query.id;
+    Post.findById({ _id: id }, function (error, user) {
+        if (error) {
+            console.log("error is their");
+            return;
+
+        }
+        var title =user.Title;
+        content = user.content;
+        button = "Update"
+        action="/posts/update/?id=" + id;
+        return res.render('addnotes', { Title: title, Content: content, Button: button ,Action:action});
+
+     
+
+
+    })
+    
+ 
+
+}
+module.exports.update=function(req,res)
+{
+
     console.log(req.query.id);
-    // return res.render('');
-    // let value;
-    // Post.findByIdAndUpdate(id,{content:req.body.content,Title:req.body.Title},function(error,user){
-    //     if(error)
-    //     {
-    //         console.log("error during updates");
-    //     }
-    //     console.log("updatation done");
-    //     return res.redirect('/user/profile');
-
-    // });
-
-    // console.log(req.body);
-    // console.log(req.query);
-
+    Post.findByIdAndUpdate(req.query.id,{content:req.body.content,Title:req.body.title},function(error,post){
+        if(error)
+        {
+            console.log("error in update");
+            return ;
+        }
+        console.log(post);
+        return res.redirect('/user/profile');
+    })
 
 }
