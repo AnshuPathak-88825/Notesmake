@@ -40,63 +40,11 @@
           <a href="/posts/delete/?id=<%=i._id%>">Delete</a>
             
         </div>
-        <!-- <div class="buttons">
-          <a href="/posts/read/?id=<%=i._id%>"
-            ><button type="button" class="btn btn-outline-secondary">
-              Read
-            </button></a
-          >
-          <a href="/posts/delete/?id=<%=i._id%>"
-            ><button type="button" class="btn btn-outline-danger">
-              Delete
-            </button></a
-          >
-        </div> -->
+      
       </div>
       <% } %>
     </div>
   </body>
 
-  <!-- <a href="/user/profile"> <%= user.name %></a>
-  <a href="/user/signout">Sign Out</a>
-  <h1>Profile</h1>
-  <p><%=user.name%></p>
-  <p><%=user.email%></p>
-  <a href="/user/profile/todo">todo</a>
-  <a href="/user/profile/link/?name=<%=user.name%>" >Linktree</a>
-  <a href="/user/profile/Book">Books</a>
-  <a href="/user/profile/movie">Movie</a>
 
-
-
-  <a href="/posts/addnote"
-    ><button type="button" class="btn btn-secondary">Add note</button></a
-  >
-  <%post_list.reverse()%>
-
-  <div class="box-container">
-    <% for(let i of post_list){%>
-
-    <div class="notes-cont">
-      <div class="title"><%=i.Title%></div>
-      <div class="date">
-        <% var date =i.createdAt.toDateString(); %> <%=date%>
-      </div>
-      <div class="content"><%=i.content%></div>
-
-      <div class="buttons">
-        <a href="/posts/read/?id=<%=i._id%>"
-          ><button type="button" class="btn btn-outline-secondary">
-            Read
-          </button></a
-        >
-        <a href="/posts/delete/?id=<%=i._id%>"
-          ><button type="button" class="btn btn-outline-danger">
-            Delete
-          </button></a
-        >
-      </div>
-    </div>
-    <% } %>
-  </div> -->
 </html>

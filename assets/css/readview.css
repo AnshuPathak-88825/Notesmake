@@ -6,6 +6,8 @@
 body {
   padding: 15px;
 }
+
+
 .header {
   display: flex;
   flex-wrap: wrap;
@@ -28,7 +30,7 @@ body {
 }
 .header .other-field a:hover {
   color: #ffffff;
-  background-color: #5d6678;
+  background-color: #827ffe;
   transition: all 1s ease-in-out;
 }
 
@@ -50,7 +52,31 @@ body {
   font-size: 20px;
   /* padding-left:50px; */
 }
+.update-button{
+  height: 56px;
+  width: 160px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+ background-color: #827ffe;
+ cursor: pointer;
+ border-radius: 8px;
 
+}
+.update-button:hover{
+ background-color: #7473ac;
+ transition: all 1s ease-in-out;
+
+}
+.update-button a{
+  margin: auto;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 19px;
+ 
+}
 @media screen and (max-width: 1000px) {
   .name-date-cont .title {
     color: #5d6678;

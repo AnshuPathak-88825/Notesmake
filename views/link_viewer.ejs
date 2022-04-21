@@ -1,4 +1,4 @@
-<p><%=username%></p>
+<!-- <p><%=username%></p>
 <form action="/user/profile/create" method="post">
   <input type="text" name="title" placeholder="title" />
   <input type="text" name="link" placeholder="link" />
@@ -7,6 +7,98 @@
 <p> <%for(let i of link_list) {%> </p>
   <a href="<%=i.Link%>"><%=i.Title%></a>
   <a href="/user/profile/deletelink/?id=<%=i._id%>">delete</a>
-  <%}%>
+  <%}%> -->
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/links.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="Main-container">
+      <div class="name-head"><%=username%></div>
 
+      <div class="container">
+        <form class="form" action="/user/profile/create" method="POST">
+          <!-- <h1></h1> -->
+
+          <input type="text" name="title" placeholder="title" />
+          <input type="text" name="link" placeholder="link" />
+          <a href="/user/signup">Signup?</a>
+          <button type="submit" id="login-button">Login</button>
+        </form>
+      </div>
+      <div class="main-last-container">
+        <%for(let i of link_list) {%>
+        <div class="links-contrainer">
+          <div class="image">
+            <% var logo =JSON.stringify(i.Link) %> <%logo=logo.slice(13,14)%> <%
+            if(logo =='y'){ %>
+
+            <img
+              src="/image/youtube-logo-png-2069.png"
+              alt="saf"
+              style="height: 50px; width: 50px"
+            />
+
+            <!-- <%  %> -->
+            <% }else if(logo =='i'){ %>
+            <i class="fab fa-instagram"></i>
+
+            <% } else if(logo =='t'){ %>
+            <img class="i"
+              src="/image/logo-twitter-png-40407.png"
+              alt="saf"
+              style="height: 20px; width: 20px,"
+            />
+
+            <% } else if(logo =='f'){ %>
+
+            <i class="fab fa-facebook-f"></i>
+
+            <% }else { %>
+
+            <i class="fab fa-discord"></i>
+
+            <% } %>
+            <a href="<%=i.Link%>"><%=i.Title%></a>
+            <a href="/user/profile/deletelink/?id=<%=i._id%>">delete</a>
+          </div>
+        </div>
+
+        <%}%>
+      </div>
+    </div>
+    <div class="other-field">
+      <a href="/user/profile/">All-Notes</a>
+
+      <a href="/user/profile/todo">To-do</a>
+      <a href="/user/profile/link/?name=<%=user.name%>">Linktree</a>
+      <a href="/user/profile/Book">Books</a>
+      <a href="/user/profile/movie">Movie</a>
+      <a href="/user/signout">Sign Out</a>
+    </div>
+  </body>
+</html>
+<!-- <li>
+  <a href="#"><i class="fab fa-facebook-f"></i></a>
+</li>
+<li>
+  <a href="#"><i class="fab fa-instagram"></i></a>
+</li>
+<li>
+  <a href="#"><i class="fab fa-github"></i></a>
+</li>
+<i class="fa-brands fa-twitter-square"></i>
+<i class="fab fa-linkedin"></i>
+<a href="#"><i class="fab fa-discord"></i></a> -->

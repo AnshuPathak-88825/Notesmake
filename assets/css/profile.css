@@ -4,7 +4,17 @@
   padding: 14px;
 }
 body {
-  background-color: #262729;
+  background: #4776e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #8e54e9,
+    #4776e6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #8e54e9,
+    #4776e6
+  ); 
 }
 
 /* header section  */
@@ -53,7 +63,7 @@ body {
     height: 280px;
     width: 300px;
     padding: 10px;
-  background-color: #262729;
+   background-color: transparent;
   border: 1px solid white;
   color: white;
 }
@@ -97,7 +107,7 @@ padding: 0px;
  {
 
    background-color: white;
-   color: #262729;
+   color: transparent;
    transition: all 1s ease-in-out;
  }
  @media screen and (max-width: 400px) {
