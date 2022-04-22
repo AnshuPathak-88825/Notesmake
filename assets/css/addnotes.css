@@ -93,29 +93,7 @@ form{
 }
 @media screen and (max-width: 480px) {
    
-    /* #wrapper{
-    }
-    #text{
-        transform: translate(100px, 200px);
-    } */
-
-
- /* #text {
-        height: 500px;
-        width:90%;
-        
-    }
-    #wrapper {
-        width:80%;
-        display: flex;
-        flex-direction: column;
-        
-        height:auto;
-        margin-left:auto;
-        margin-right:auto;
-        margin-top:24px;
-        margin-bottom:100px;
-    }    */
+   
     #button {
         width: 60%;
      
