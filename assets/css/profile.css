@@ -51,12 +51,13 @@ body {
   padding: 0px;
 }
 .notes-cont {
-    height: 280px;
-    width: 300px;
-    padding: 10px;
-   background-color: transparent;
+  height: 280px;
+  width: 223px;
+  padding: 10px;
+  background-color: transparent;
   border: 1px solid white;
   color: white;
+  margin: 14px;
 }
 .title
 {
