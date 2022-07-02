@@ -3,22 +3,12 @@
   margin: 0px;
 }
 body {
-  background: #4776e6; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #8e54e9,
-    #4776e6
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #8e54e9,
-    #4776e6
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: white; /* fallback for old browsers */
 }
 
-.name-header {
+.name-head {
   text-align: center;
-  color: white;
+  color: rgb(7, 7, 7);
   padding: 25px;
 }
 .container {
@@ -39,7 +29,7 @@ body {
 }
 .container form input {
   height: 66px;
-  background-color: #ffffff;
+  background-color: #f8f9fa;
   border: 0px;
   font-weight: bold;
   color: #403866;
@@ -65,12 +55,13 @@ h1 {
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
-  color: #262729;
+  color: rgb(0, 119, 181);;
   border-radius: 6px;
   display: block;
   cursor: pointer;
   font-size: 17px;
-  font-weight: bold;
+  
+  border: 1px solid #2196f3;
 }
 .container form h1 {
   text-align: center;
@@ -86,9 +77,10 @@ h1 {
 }
 
 #login-button:hover {
-  background-color: #262729;
-  color: white;
+  background-color: rgb(0, 119, 181);;
+  color: rgb(255, 255, 255);
   transition: all 1s ease-in-out;
+  border: 1px solid #2196f3;;
 }
 .container form a:hover {
   color: #3c138d;
@@ -122,37 +114,38 @@ h1 {
   z-index: 245;
   padding: 25px;
   text-align: center;
-  color: white;
+  color: rgb(27, 27, 27);
   font-weight: bold;
   font-size: 24px;
   /* height: 100%; */
 }
-.links-contrainer
-{
-    display: flex;
-    
-    flex-direction: column;
-    border: 1px solid rgb(255, 253, 253);
-    /* padding: 13px; */
-    
-}
+
+/* link container  */
+
 .main-last-container
 {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 56%;
     margin: auto;
 }
-.image i,.i{
-    font-size: 30px;
-    padding: 12px;
-}
+
 .image{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    cursor: pointer;
+    /* cursor: pointer; */
+    border-radius: 5px;
+    margin: 9px;
+height: 44px;
+position: relative;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  
 }
+/* .image:hover{
+  height: 100px;
+  transition: all 2s linear 1s;
+} */
 .image a{
     color: rgb(53, 49, 49);
     text-decoration: none;
@@ -161,6 +154,109 @@ h1 {
     font-size: 18px;
 
 }
+/* for youtube */
+#y
+{
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 0, 0);
+
+}
+#y a{
+  color:rgb(255, 0, 0);
+  text-decoration: none;
+  padding: 12px;
+  font-size: 18px;
+
+}
+#y i{
+ font-size: 23px;
+ color: rgb(255, 0, 0);
+}
+/* for twitter */
+#t
+{
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 172, 238);
+
+}
+#t a{
+  color:rgb(0, 172, 238);
+  text-decoration: none;
+  padding: 12px;
+  font-size: 18px;
+
+}
+#t i{
+ font-size: 23px;
+ color: rgb(0, 172, 238);
+}
+/* for linkedin */
+#l
+{
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 119, 181);
+
+}
+#l a{
+  color:rgb(0, 119, 181);
+  text-decoration: none;
+  padding: 12px;
+  font-size: 18px;
+
+}
+#l i{
+ font-size: 23px;
+ color: rgb(0, 119, 181);
+}
+/* for instagram */
+#i
+{
+ 
+  border: 1px solid rgb(181, 0, 166);
+
+}
+#i a{
+  
+  color: #800080;
+ 
+
+}
+#f i{
+ font-size: 23px;
+ color: #166fe5;
+}
+/* for facebook */
+#f{
+  border: 1px solid #166fe5;
+}
+#f a{
+  
+  color: #166fe5;
+ 
+
+}
+#f i{
+ font-size: 23px;
+ color:#166fe5;
+}
+/* for url  */
+.link{
+  border: 1px solid rgb(26, 24, 23);
+}
+.link a{
+  
+  color: rgb(26, 24, 23);
+ 
+
+}
+.link i{
+ font-size: 23px;
+ color: rgb(26, 24, 23);
+ position: absolute;
+ top: 9px;
+ left: 14px;
+}
+
 
 .image:hover
 {
@@ -183,11 +279,26 @@ transition: all 0.6s ease-in-out;
     padding: 3px;
     border-radius: 4px;
   }
+
+  .links-contrainer:hover{
+    /* transform: translate(10px,10px);
+     */
+     transform: scale(1.03);
+     transition: all 0.5s ease-in-out ;
+  }
    .other-field a:hover {
-  color: #262729;
-  background-color: white;
+   background-color: rgb(0, 119, 181);
+   color: white;
   transition: all 1s ease-in-out;
 }
+.other-field a {
+  color: rgb(0, 119, 181);
+  /* border: 1px solid rgb(0, 119, 181);; */
+
+  transition: all 1s ease-in-out;
+}
+
+
 @media screen and (max-width: 900px) {
     .main-last-container
     {
@@ -197,3 +308,9 @@ transition: all 0.6s ease-in-out;
         margin: auto;
     }
   }
+.image .delete
+{
+  position: absolute;
+  left: 90%;
+  
+}
